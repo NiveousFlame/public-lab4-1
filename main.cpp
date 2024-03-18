@@ -1,6 +1,6 @@
 #include <QCoreApplication>
 #include <QDebug>
-
+#include "bubblesort.h"
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -12,7 +12,8 @@ int main(int argc, char *argv[])
 
     qDebug() << "原始数列："<< vec;       // 输出数组
 
-    qSort(vec.begin(),vec.end());       // 使用Qt的排序函数对数组进行排序
+    BubbleSort(vec);
+    // qSort(vec.begin(),vec.end());        // 使用Qt的排序函数对数组进行排序
 
     qDebug() << "已排序数列："<< vec;     // 再次输出已排序的数组
 
